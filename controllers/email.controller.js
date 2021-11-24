@@ -7,8 +7,8 @@ exports.EmailSender = async (req, res) => {
 
     try {
         await sendEmail(messageObj)
-        res.send("Email sent")
+        return res.send("Email sent")
     } catch (error) {
-        res.send(err.message)
+        return res.send(err.message)
     }
 }
