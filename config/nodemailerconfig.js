@@ -11,7 +11,7 @@ const transport = nodemailer.createTransport(
         }
     }
 )
-// nbpupmovbwbpjtvd
+
 function verifySmtp(){
     // verify connection configuration
  transport.verify(function (error, success) {
@@ -25,17 +25,6 @@ function verifySmtp(){
 }
 verifySmtp(); // call function in index.js file
 
-const sendEmail = async (message) => {
-    return new Promise((resolve, reject) => {
-        transport.sendMail(message, (err, info) => {
-            if (err) {
-                return reject(err)
-            }
 
-            console.log(info.response)
-            resolve(info.response)
-        })
-    })
-}
 
-module.exports = sendEmail
+module.exports = transport
