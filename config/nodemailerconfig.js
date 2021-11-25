@@ -23,8 +23,8 @@ function verifySmtp(){
     return true;
 });
 }
-verifySmtp(); // call function in index.js file
+// verifySmtp(); // call function in index.js file
 
 
 
-module.exports = transport
+module.exports = {transport, verifySmtp}

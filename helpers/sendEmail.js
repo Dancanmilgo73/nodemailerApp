@@ -1,4 +1,6 @@
-const transport = require("../config/nodemailerconfig")
+// const transport = require("../config/nodemailerconfig")
+
+const { transport } = require("../config/nodemailerconfig")
 
 const sendEmail = async(message) => {
     return new Promise((resolve, reject) => {
